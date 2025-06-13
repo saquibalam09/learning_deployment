@@ -7,7 +7,7 @@ config();
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Adjust this to your frontend URL
+  origin: "https://learning-deployment-frontend-8owo.onrender.com", // Adjust this to your frontend URL
 };
 
 app.use(cors(corsOptions));
@@ -29,5 +29,5 @@ mongoose
   });
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the backend server!" });
+  res.status(201).json({ message: "Connected to Backend!" });
 });
