@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000")
+    fetch("https://learning-deployment-u35k.onrender.com")
       .then((response) => response.text())
       .then((data) => setMessage(data))
 
