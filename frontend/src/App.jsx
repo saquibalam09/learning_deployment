@@ -7,9 +7,8 @@ function App() {
 
   useEffect(() => {
     fetch("https://learning-deployment-u35k.onrender.com")
-      .then((response) => response.text())
-      .then((data) => setMessage(data))
-
+      .then((response) => response.json())
+      .then((data) => setMessage(data.message))
       .catch((error) => console.error("Error fetching message:", error));
 
     /*
